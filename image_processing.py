@@ -3,9 +3,14 @@ from PIL import Image
 def cmp(a, b):
     return (a > b) - (a < b)
 
-def flag_value(flag):
+def flag_value_red(flag):
     flag = flag+1
     flag = flag%4
+    return flag
+
+def flag_value_blue(flag):
+    flag = flag+1
+    flag = flag%15
     return flag
 
 k = 1984
@@ -21,34 +26,34 @@ while(k<2016):
     flag = 0
     for i in range(img2.size[0]):
         for j in range(img2.size[1]):
-            if (cmp(im1.getpixel((i,j)),im2.getpixel((i,j)))>=1 and i<img2.size[0]/2 and j<img2.size[1]/2):#pix_val1([i][j]),pix_val2([i][j]))==0):
+            if (cmp(im1.getpixel((i,j)),im2.getpixel((i,j)))>=1 and i<img2.size[0]/2 and j<img2.size[1]/2):#
                 if(flag==0):
                     pixelsNew2[i,j] = (255,0,0)
-                    flag = flag_value(flag)
+                    flag = flag_value_red(flag)
                 else:
                     pixelsNew2[i,j] = im2.getpixel((i,j))
-                    flag = flag_value(flag)
+                    flag = flag_value_red(flag)
             elif(cmp(im1.getpixel((i,j)),im2.getpixel((i,j)))>=1 and i<img2.size[0]/2 and j>img2.size[1]/2):
                 if(flag==0):
                     pixelsNew2[i,j] = (0,0,255)
-                    flag = flag_value(flag)
+                    flag = flag_value_blue(flag)
                 else:
                     pixelsNew2[i,j] = im2.getpixel((i,j))
-                    flag = flag_value(flag)
+                    flag = flag_value_blue(flag)
             elif (cmp(im1.getpixel((i,j)),im2.getpixel((i,j)))>=1 and i>img2.size[0]/2 and j>=img2.size[1]/2):
                 if(flag==0):
                     pixelsNew2[i,j] = (255,0,0)
-                    flag = flag_value(flag)
+                    flag = flag_value_red(flag)
                 else:
                     pixelsNew2[i,j] = im2.getpixel((i,j))
-                    flag = flag_value(flag)
+                    flag = flag_value_red(flag)
             elif(cmp(im1.getpixel((i,j)),im2.getpixel((i,j)))>=1 and i>img2.size[0]/2 and j<img2.size[1]/2):
                 if(flag==0):
                     pixelsNew2[i,j] = (0,0,255)
-                    flag = flag_value(flag)
+                    flag = flag_value_blue(flag)
                 else:
                     pixelsNew2[i,j] = im2.getpixel((i,j))
-                    flag = flag_value(flag)
+                    flag = flag_value_blue(flag)
             else:
                 pixelsNew2[i,j] = im2.getpixel((i,j))
     c = str(k)
