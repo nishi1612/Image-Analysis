@@ -96,7 +96,6 @@ plt.grid(True)
 plt.legend(loc='upper right')
 plt.title('Count of pixels v/s Years')
 plt.show()
-plt.savefig('Graphs/Graph_1.png')
 
 # Plot the scatter plot to show the difference between count of pixels in consecutive years
 plt.scatter(years,change_blue)
@@ -105,7 +104,6 @@ plt.xlabel('Years')
 plt.grid(True)
 plt.title('Change of pixels v/s Years')
 plt.show()
-plt.savefig('Graphs/Graph_2.png')
 
 # Plot the scatter plot to show the difference between count of pixels in consecutive years
 plt.scatter(years,change_green)
@@ -114,7 +112,6 @@ plt.xlabel('Years')
 plt.grid(True)
 plt.title('Change of pixels v/s Years')
 plt.show()
-plt.savefig('Graphs/Graph_3.png')
 
 # Plot the scattered graph using plt
 plt.scatter(years,count_blue)
@@ -123,6 +120,5 @@ plt.xlabel('Years')
 plt.grid(True)
 plt.title('Count of pixels v/s Years')
 plt.show()
-plt.savefig('Graphs/Graph_4.png')
 
 # Conclusion : From the graph one can see that number of blue pixels decrease and green increases although change in green pixels is not significant
