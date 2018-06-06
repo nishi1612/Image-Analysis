@@ -16,4 +16,4 @@ Analysis of the values obtained :
 3. Maximum change in blue pixels was observed in year : 93.0 1989.0  
 4. Maximum value of blue pixels in any image : 1197.0 Year : 2000.0 
 5. Minimum value of blue pixels in any image : 1119.0 Year : 1991.0 
-6.Maximum change in green pixels was observed in which year : 35.0 1995.0
+6. Maximum change in green pixels was observed in which year : 35.0 1995.0
