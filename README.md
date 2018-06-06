@@ -10,9 +10,15 @@ Ouput Given :
 3. Study of number of green pixels depicting land area and vegetation in the image.
 
 Analysis of the values obtained : 
+
 Maximum value of blue pixels in any image : 1635.0 Year : 1990.0 
+
 Minimum value of blue pixels in any image : 1457.0 Year : 2009.0 
+
 Maximum change in blue pixels was observed in year : 93.0 1989.0  
+
 Maximum value of blue pixels in any image : 1197.0 Year : 2000.0 
+
 Minimum value of blue pixels in any image : 1119.0 Year : 1991.0 
+
 Maximum change in green pixels was observed in which year : 35.0 1995.0
