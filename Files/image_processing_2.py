@@ -40,7 +40,7 @@ while(k<2016):
     year = np.array([k])
     years = np.concatenate((years, year))
 
-    # Increament k to go to next year
+    # Increament k to go to the image of next year
     k = k + 1
 
 # Maximum number of blue pixels and its corresponding year
@@ -59,8 +59,9 @@ for i in range(0,count_blue.size-1):
     value = np.array([ans])
     change_blue = np.concatenate((change_blue,value))
 
+# Maximum change in blue pixels was observed in which year
 maximum_index_change_blue = np.argmax(change_blue)
-print(str(np.amax(change_blue)) + ' ' + str(years[maximum_index_change_blue]))
+print('Maximum change in blue pixels was observed in year : ' + str(np.amax(change_blue)) + ' ' + str(years[maximum_index_change_blue]))
 
 value = np.array([count_blue.size])
 change_blue = np.concatenate((change_blue,value))
@@ -81,8 +82,9 @@ for i in range(0,count_green.size-1):
     value = np.array([ans])
     change_green = np.concatenate((change_green,value))
 
+# Maximum change in green pixels was observed in which year
 maximum_index_change_green = np.argmax(change_green)
-print(str(np.amax(change_green)) + ' ' + str(years[maximum_index_change_green]))
+print('Maximum change in green pixels was observed in year : ' + str(np.amax(change_green)) + ' ' + str(years[maximum_index_change_green]))
 
 value = np.array([count_blue.size])
 change_green = np.concatenate((change_green,value))
@@ -95,30 +97,43 @@ plt.xlabel('Years')
 plt.grid(True)
 plt.legend(loc='upper right')
 plt.title('Count of pixels v/s Years')
+plt.savefig('Graphs/Graph_1.png')
 plt.show()
 
-# Plot the scatter plot to show the difference between count of pixels in consecutive years
-plt.scatter(years,change_blue)
-plt.ylabel('Change of pixels')
+# Plot the line graph to show the difference between count of blue pixels in consecutive years
+plt.plot(years,change_blue)
+plt.ylabel('Change of blue pixels')
 plt.xlabel('Years')
 plt.grid(True)
-plt.title('Change of pixels v/s Years')
+plt.title('Change of blue pixels v/s Years')
+plt.savefig('Graphs/Graph_2.png')
 plt.show()
 
-# Plot the scatter plot to show the difference between count of pixels in consecutive years
-plt.scatter(years,change_green)
-plt.ylabel('Change of pixels')
+# Plot the line graph to show the difference between count of green pixels in consecutive years
+plt.plot(years,change_green)
+plt.ylabel('Change of green pixels')
 plt.xlabel('Years')
 plt.grid(True)
-plt.title('Change of pixels v/s Years')
+plt.title('Change of green pixels v/s Years')
+plt.savefig('Graphs/Graph_3.png')
 plt.show()
 
-# Plot the scattered graph using plt
-plt.scatter(years,count_blue)
-plt.ylabel('Count of pixels')
+# Plot the line graph to show the trend of overall blue pixels in the image
+plt.plot(years,count_blue)
+plt.ylabel('Count of blue pixels')
 plt.xlabel('Years')
 plt.grid(True)
-plt.title('Count of pixels v/s Years')
+plt.title('Count of blue pixels v/s Years')
+plt.savefig('Graphs/Graph_4.png')
+plt.show()
+
+# Plot the line graph to show the trend of overall blue pixels in the image
+plt.plot(years,count_green)
+plt.ylabel('Count of green pixels')
+plt.xlabel('Years')
+plt.grid(True)
+plt.title('Count of green pixels v/s Years')
+plt.savefig('Graphs/Graph_5.png')
 plt.show()
 
 # Conclusion : From the graph one can see that number of blue pixels decrease and green increases although change in green pixels is not significant
